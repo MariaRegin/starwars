@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Звездные войны</title>
+  </head>
+  <body>
+    <h1>Кого или что будем искать?</h1>
+    <div class="input-container">
+      <select class="select" name="select" autofocus required>
+        <option value="planets">Планеты</option>
+        <option value="people">Людей</option>
+        <option value="films">Фильмы</option>
+      </select>
+      <input
+        class="number"
+        type="text"
+        placeholder="Введи ID планеты, человека или фильма"
+        required
+        onkeypress="return /[0-9]/i.test(event.key)"
+      />
+      <button class="button">Вперед</button>
+    </div>
+    <div class="loader"></div>
+    <div class="content-container"></div>
+    <div class="info-container"></div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
